@@ -1,4 +1,3 @@
-/* styles.css */
 body {
     font-family: Arial, sans-serif;
     background-image: url('backimage1.jpg');
@@ -9,37 +8,39 @@ body {
     margin: 0;
     background-size: cover;
     background-repeat: no-repeat;
-  }
-  
-  .music-player {
+}
+
+.music-player {
     background-color: #333;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     text-align: center;
     color: #fff;
-    width: 300px;
-    height: 565px;
+    width: 90%; 
+    max-width: 300px;
+    height: auto;
     margin: auto;
-  }
-  
-  .cover img {
+}
+
+.cover img {
     width: 100%;
     height: 200px;
     border-radius: 10px;
-  }
-  
-  .info {
+}
+
+.info {
     margin: 10px 0;
-  }
-  
-  .controls {
+}
+
+.controls {
     display: flex;
     justify-content: center;
     gap: 10px;
     margin: 20px;
-  }
-  .control-btn {
+}
+
+.control-btn {
     background-color: #444;
     color: #fff;
     border: none;
@@ -49,44 +50,89 @@ body {
     font-size: 20px;
     cursor: pointer;
     transition: background-color 0.2s;
-  }
-  
-  .control-btn:hover {
+}
+
+.control-btn:hover {
     background-color: #555;
-  }
-  
-  .progress-container {
+}
+
+.progress-container {
     background-color: #444;
     border-radius: 5px;
     height: 5px;
     width: 100%;
     cursor: pointer;
-  }
-  
-/* Playlist container */
-.playlist-container {
-  margin-top: 16px;
-  max-height: 200px;
-  transition: max-height 0.3s ease-in-out;
-  display: inline;
 }
 
-/* Toggle playlist button */
+.playlist-container {
+    margin-top: 16px;
+    max-height: 200px;
+    transition: max-height 0.3s ease-in-out;
+    display: inline;
+}
+
+
 #togglePlaylistBtn {
-  margin-top: 8px;
-  background-color: #444;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 8px;
-  font-size: 19px;
-  cursor: pointer;
-  transition: background-color 0.2s;
+    margin-top: 8px;
+    background-color: #444;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 19px;
+    cursor: pointer;
+    transition: background-color 0.2s;
 }
 
 #togglePlaylistBtn:hover {
-  background-color: #555;
+    background-color: #555;
 }
-#togglePlaylistBtn,h3{
-  display: inline;
+
+#togglePlaylistBtn, h3 {
+    display: inline;
+}
+
+
+@media (max-width: 768px) {
+    .music-player {
+        width: 80%;
+        padding: 15px;
+    }
+
+    .cover img {
+        height: 150px; 
+    }
+
+    .control-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+
+    #togglePlaylistBtn {
+        font-size: 16px;
+        padding: 6px;
+    }
+}
+
+@media (max-width: 480px) {
+    .music-player {
+        width: 90%;
+        padding: 10px;
+    }
+
+    .cover img {
+        height: 120px; 
+    }
+
+    .control-btn {
+        width: 35px;
+        height: 35px;
+        font-size: 16px;
+    }
+
+    #togglePlaylistBtn {
+        font-size: 14px;
+        padding: 5px;
+    }
 }
